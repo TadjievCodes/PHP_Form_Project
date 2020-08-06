@@ -15,7 +15,7 @@ var_dump($_SESSION['counter']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tadjiev Project PHP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -28,7 +28,13 @@ var_dump($_SESSION['counter']);
             echo '<form action="tadjiev_output.php" method="post">
             <h1>Rate your favorite (or not) movie from 1 to 5</h1>
             <div class="input-group">
-                <input type="text" name="name" class="form-control col-6" placeholder="Movies name">
+                                                         <!-- col-sm makes it resposnsive and col-6 makes it and takes 6 spaces, plus it has 12 rows kinda  --> 
+                <input type="text" name="name" class="form-control col-sm" placeholder="Movies name">
+
+                <div class="input-group-prepend">
+                <input type="text" name="genre" class="form-control" placeholder="Movies genre">
+                </div>
+
                 <div class="input-group-prepend">
                     <select name="rate" id="rate" class="input-group-text">
                         <option value="1">1</option>
@@ -36,6 +42,11 @@ var_dump($_SESSION['counter']);
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
                 </div>
             </div>
@@ -46,30 +57,15 @@ var_dump($_SESSION['counter']);
         ?> 
         <!-- <div class="alert alert-danger" role="alert">
             Maximum 3 games you can rate!
-        </div> -->             
+        </div> -->  
+
+
+
+
         <a class="btn btn-success" href="tadjiev_output.php" role="button">View all records</a>
-        <!-- <form action="adil_output.php" method="post">
-            <h1>Rate your favorite (or not) game from 1 to 5</h1>
-            <div class="input-group">
-                <input type="text" name="name" class="form-control col-6" placeholder="Game name" aria-label="Game name" aria-describedby="addon-wrapping">
-                <div class="input-group-prepend">
-                    <select name="rate" id="rate" class="input-group-text">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
-        </form> -->
-        <?php 
-        if(isset($_POST['submit']))
-        {
-            insert_data();
-        } 
-        ?>
+        
+
+        
     </div>
 </body>
 <!-- bootstrap dependecies -->
