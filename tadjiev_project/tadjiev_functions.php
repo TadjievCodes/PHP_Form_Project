@@ -12,7 +12,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword,$dbName);
 //   }
 //   echo "Connected successfully";
 
-// end db connecting
+// end db connectingasdfgh
 
 
 // if (isset($_GET['debug'])) {
