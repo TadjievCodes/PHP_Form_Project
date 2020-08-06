@@ -5,7 +5,7 @@ $dbUser = "root";
 $dbPassword = "root";
 $dbName = "tadjiev_project";
 
-$connecting = new mysqli($dbServer, $dbUser, $dbPassword,$dbName);
+$connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
 // if ($connecting->connect_error) {
 //     die("Connection failed: " . $connecting->connect_error);
@@ -30,11 +30,14 @@ if(!isset($_SESSION['counter'])) {
 }
 
 function insert_data () {
-    $dbservername = 'localhost';
-    $dbUsername = "root";
-    $dbPass = "root";
-    $dbName = "tadjiev_project";
-    $connecting = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
+    
+$dbServer = 'localhost';
+$dbUser = "root";
+$dbPassword = "root";
+$dbName = "tadjiev_project";
+
+$connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
+
     // if ($connecting->connect_error) {
     //     die("Connection failed: " . $connecting->connect_error);
     //   }
