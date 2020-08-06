@@ -1,18 +1,19 @@
 <?php 
 // db connecting
 $dbServer = 'localhost';
-$dbUser = "root";
-$dbPassword = "";
+$dbUser = "phpuser";
+$dbPassword = "phpuser";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
-// if ($connecting->connect_error) {
-//     die("Connection failed: " . $connecting->connect_error);
-//   }
-//   echo "Connected successfully";
-
-// end db connectin
+// The if statement in order to uncomment and double check whether the connection to Database is working
+/*
+if ($connecting->connect_error) {
+    die("Connection failed: " . $connecting->connect_error);
+  }
+  echo "Connected successfully";
+*/
 
 
 // if (isset($_GET['debug'])) {
@@ -21,6 +22,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 //     var_dump("Post array:", $_POST);
 //     echo '</pre>';
 // }
+
 // First try this then move on to the next line hey boysssssssss
 
 if(!isset($_SESSION['counter'])) {
@@ -32,8 +34,8 @@ if(!isset($_SESSION['counter'])) {
 function insert_data () {
     
 $dbServer = 'localhost';
-$dbUser = "root";
-$dbPassword = "";
+$dbUser = "phpuser";
+$dbPassword = "phpuser";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
@@ -54,8 +56,8 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 function select_data () {
     
 $dbServer = 'localhost';
-$dbUser = "root";
-$dbPassword = "";
+$dbUser = "phpuser";
+$dbPassword = "phpuser";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
