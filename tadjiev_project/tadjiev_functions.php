@@ -2,7 +2,7 @@
 // db connecting
 $dbServer = 'localhost';
 $dbUser = "root";
-$dbPassword = "root";
+$dbPassword = "";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
@@ -12,7 +12,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 //   }
 //   echo "Connected successfully";
 
-// end db connectingasdfgh
+// end db connectin
 
 
 // if (isset($_GET['debug'])) {
@@ -33,7 +33,7 @@ function insert_data () {
     
 $dbServer = 'localhost';
 $dbUser = "root";
-$dbPassword = "root";
+$dbPassword = "";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
@@ -55,7 +55,7 @@ function select_data () {
     
 $dbServer = 'localhost';
 $dbUser = "root";
-$dbPassword = "root";
+$dbPassword = "";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
