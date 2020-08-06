@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wander - Lab7</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      body {
+        background: #333333;
+        font: 16px arial, sans-serif;
+        color: white;
+      }
+      .wrap {
+        width: 80%;
+        border: 2px solid cyan;
+        margin: 100px auto;
+        max-width: 900px;
+        min-width: 600px;
+      }
+      h1 {
+          color: cyan;
+          text-align: center;
+          margin: 20px auto;
+      }
+      label {
+          color: cyan;
+          margin-left: 5px; 
+      }
+    </style>
+</head>
+<body>
+  <div class="wrap">
+      <h1>Please complete your delivery information</h1><br>
+      <form action="Week7_Wander_Cepeda_output.php" method="POST">
+          <label for="fullname"><strong>Full Name:</strong></label>
+        <input type="text" name="full_name"><br><br>
+          <label for="customerAddress"><strong>Choose an address:</strong></label><br>
+        <input type="radio" id="fcAddress" name="cAddress" value="FcAddress">
+          <label for="fcAddress">700 King Street, London, ON</label><br>
+        <input type="radio" id="scAddress" name="cAddress" value="ScAddress">
+          <label for="scAddress">650 Lyle Street, Mississauga, ON</label><br>
+        <input type="radio" id="tcAddress" name="cAddress" value="TcAddress">
+          <label for="tcAddress">190 Dundas Street, Toronto, ON</label><br><br>
+        <!-- Options -->
+        <label for="freeItem"><strong>Choose your free item:</strong></label>
+          <select name="itemOpts">
+              <option value="speaker" selected>Speaker</option>
+              <option value="sunglasses">Sunglasses</option>
+              <option value="headphones">Headphones</option>
+          </select><br><br>
+          <input type="submit" class="btn btn-success" value="Submit">
+    <!-- JS code -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+  </body>
+</html>
