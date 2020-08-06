@@ -30,7 +30,11 @@ include_once "tadjiev_functions.php";
    <br>
    <br>
 
-   <a href="/tadjiev_form.php">Back to the Form</a>
+ <!-- Special in built PHP method  htmlspecialchars($_SERVER['HTTP_REFERER']); in order to go back to the previous page where is the form--> 
+   <?php
+  $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
+  echo "<a href='$url'>Back to the Form</a>"; 
+?>
 
 </body>
 <!-- bootstrap dependecies -->
