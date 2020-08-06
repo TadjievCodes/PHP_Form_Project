@@ -42,7 +42,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     //     die("Connection failed: " . $connecting->connect_error);
     //   }
     // echo "Connected successfully";    
-    $sql="INSERT INTO movies (name, rating) VALUES ('$_POST[name]', '$_POST[rate]')";
+    $sql="INSERT INTO movies (nameMovie, genre) VALUES ('$_POST[name]', '$_POST[rate]')";
     if ($connecting->query($sql) === TRUE) {
         echo "<div class='alert alert-success' role='alert'> A new row was successfully added </div>" ."<br>";
       } else {
@@ -66,25 +66,10 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     $result = $connecting->query($sql);
     
     if ($result->num_rows > 0) {
-        echo '<table class="table table-striped table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Game Name</th>
-            <th scope="col">Rate</th>
-          </tr>
-        </thead>
-        <tbody>';
       // output data of each row
       while($row = $result->fetch_assoc()) {
-          echo '  <tr>
-          <th scope="row">'. $row["id"].'</th>
-          <td>'. $row["name"].'</td>;
-          <td>'. $row["rating"]. '</td>
-        </tr>';
-        // echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["rating"]. "<br>";
+        echo "id: " . $row["id"]. " - Name: " . $row["nameMovie"]. " " . $row["genre"]. "<br>";
       }
-      echo '</tbody>';
     } else {
       echo "0 results";
     }

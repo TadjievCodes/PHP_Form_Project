@@ -4,7 +4,7 @@ session_start();
 include_once 'tadjiev_functions.php';
 var_dump($_SESSION['counter']);
 
-// session_unset();
+//session_unset();
 ?>
 
 <!DOCTYPE html>
