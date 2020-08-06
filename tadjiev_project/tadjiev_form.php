@@ -4,6 +4,10 @@ session_start();
 include_once 'tadjiev_functions.php';
 var_dump($_SESSION['counter']);
 
+
+// In case if there are more than 3 entries of the data into form meaning after 3 trials it stops and gives errors so to
+// let it work, we can do this > uncomment this below line session_unset();
+
 //session_unset();
 ?>
 
@@ -32,7 +36,7 @@ var_dump($_SESSION['counter']);
                 <input type="text" name="name" class="form-control col-sm" placeholder="Movies name">
 
                 <div class="input-group-prepend">
-                <input type="text" name="genre" class="form-control" placeholder="Movies genre">
+                <input type="text" name="genreEntry" class="form-control" placeholder="Movies genre">
                 </div>
 
                 <div class="input-group-prepend">

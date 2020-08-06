@@ -44,7 +44,11 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     //     die("Connection failed: " . $connecting->connect_error);
     //   }
     // echo "Connected successfully";    
-    $sql="INSERT INTO movies (nameMovie, genre) VALUES ('$_POST[name]', '$_POST[rate]')";
+
+
+
+
+    $sql="INSERT INTO movies (nameMovie, genre, rating) VALUES ('$_POST[name]', '$_POST[genreEntry]', '$_POST[rate]')";
     if ($connecting->query($sql) === TRUE) {
         echo "<div class='alert alert-success' role='alert'> A new row was successfully added </div>" ."<br>";
       } else {
@@ -69,8 +73,9 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     
     if ($result->num_rows > 0) {
       // output data of each row
+
       while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["nameMovie"]. " " . $row["genre"]. "<br>";
+        echo "id: " . $row["id"]. " - Name: " . $row["nameMovie"]. " " . $row["genre"]. " " . $row["rating"]. "<br>";
       }
     } else {
       echo "0 results";
