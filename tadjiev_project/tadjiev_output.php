@@ -33,7 +33,8 @@ include_once "tadjiev_functions.php";
    <br>
    <br>
 
- <!-- Special in built PHP method  htmlspecialchars($_SERVER['HTTP_REFERER']); in order to go back to the previous page where is the form--> 
+ <!-- Special in built PHP method  htmlspecialchars($_SERVER['HTTP_REFERER']); in order to go back to the previous page where is the form-->
+ <!-- use the HTTP_REFERER, sanitize it, and echo it out via PHP below--> 
    <?php
   $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
   echo "<a href='$url'>Back to the Form</a>"; 
