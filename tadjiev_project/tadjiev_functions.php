@@ -84,14 +84,14 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     $connecting->close();
 }
 
-// done
+// THe function to sanitize with htmlentities specially
 function sanitize_html () {
     foreach($_POST as $key => $element) {
         $_POST[$key] = htmlentities($element);
     } 
 }
 
-// TODO
+
 function increment_session_counter() {
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
     // var_dump($_SESSION['counter'] . " fucn");    
