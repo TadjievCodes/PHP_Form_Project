@@ -21,7 +21,7 @@ $conn = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
 //     var_dump("Post array:", $_POST);
 //     echo '</pre>';
 // }
-// First try this then move on to the next line
+// First try this then move on to the next line hey
 
 if(!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 0;
