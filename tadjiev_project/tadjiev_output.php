@@ -26,6 +26,11 @@ include_once "tadjiev_functions.php";
         // var_dump($_SESSION['counter'] . " output.php");
         ?>
     </div>
+   
+   <br>
+   <br>
+
+   <a href="/tadjiev_form.php">Back to the Form</a>
 
 </body>
 <!-- bootstrap dependecies -->
