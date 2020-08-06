@@ -42,7 +42,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     //     die("Connection failed: " . $connecting->connect_error);
     //   }
     // echo "Connected successfully";    
-    $sql="INSERT INTO games (name, rating) VALUES ('$_POST[name]', '$_POST[rate]')";
+    $sql="INSERT INTO movies (name, rating) VALUES ('$_POST[name]', '$_POST[rate]')";
     if ($connecting->query($sql) === TRUE) {
         echo "<div class='alert alert-success' role='alert'> A new row was successfully added </div>" ."<br>";
       } else {
@@ -52,12 +52,17 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 }
 
 function select_data () {
-    $dbservername = 'localhost';
-    $dbUsername = "root";
-    $dbPass = "root";
-    $dbName = "adil_project";
-    $connecting = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
-    $sql = "SELECT * FROM games";
+    
+$dbServer = 'localhost';
+$dbUser = "root";
+$dbPassword = "root";
+$dbName = "tadjiev_project";
+
+$connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
+
+
+
+    $sql = "SELECT * FROM movies";
     $result = $connecting->query($sql);
     
     if ($result->num_rows > 0) {
