@@ -1,6 +1,8 @@
 <?php 
 session_start();
-include_once "adil_functions.php";
+include_once "tadjiev_functions.php";
+
+
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +10,7 @@ include_once "adil_functions.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tadjiev's Form Output</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 </head>
 <body>
