@@ -24,7 +24,7 @@ include_once "tadjiev_functions.php";
         } 
         select_data();
 
-
+              
 
         // var_dump($_SESSION['counter'] . " output.php");
         ?>
