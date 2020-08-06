@@ -31,6 +31,10 @@ if(!isset($_SESSION['counter'])) {
     $_SESSION['counter'];
 }
 
+
+
+
+
 function insert_data () {
     
 $dbServer = 'localhost';
@@ -51,7 +55,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     $sql="INSERT INTO movies (nameMovie, genre, rating) VALUES ('$_POST[name]', '$_POST[genreEntry]', '$_POST[rate]')";
     if ($connecting->query($sql) === TRUE) {
 
-        echo "<div class='alert alert-success' role='alert'> A new row was successfully added </div>" ."<br>";
+        echo "<div class='alert alert-success' role='alert'> A new row has successfully been added </div>" ."<br>";
       } else {
         echo "Error: " . $sql . "<br>" . $connecting->error;
     }
