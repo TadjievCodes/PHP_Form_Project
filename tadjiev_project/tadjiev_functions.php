@@ -1,14 +1,14 @@
 <?php 
 // db connecting
-$dbservername = 'localhost';
-$dbUsername = "root";
-$dbPass = "root";
-$dbName = "adil_project";
+$dbServer = 'localhost';
+$dbUser = "root";
+$dbPassword = "root";
+$dbName = "tadjiev_project";
 
-$conn = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
+$connecting = new mysqli($dbServer, $dbUser, $dbPassword,$dbName);
 
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
+// if ($connecting->connect_error) {
+//     die("Connection failed: " . $connecting->connect_error);
 //   }
 //   echo "Connected successfully";
 
@@ -34,18 +34,18 @@ function insert_data () {
     $dbUsername = "root";
     $dbPass = "root";
     $dbName = "tadjiev_project";
-    $conn = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
-    // if ($conn->connect_error) {
-    //     die("Connection failed: " . $conn->connect_error);
+    $connecting = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
+    // if ($connecting->connect_error) {
+    //     die("Connection failed: " . $connecting->connect_error);
     //   }
     // echo "Connected successfully";    
     $sql="INSERT INTO games (name, rating) VALUES ('$_POST[name]', '$_POST[rate]')";
-    if ($conn->query($sql) === TRUE) {
+    if ($connecting->query($sql) === TRUE) {
         echo "<div class='alert alert-success' role='alert'> A new row was successfully added </div>" ."<br>";
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $connecting->error;
     }
-    $conn->close();
+    $connecting->close();
 }
 
 function select_data () {
@@ -53,9 +53,9 @@ function select_data () {
     $dbUsername = "root";
     $dbPass = "root";
     $dbName = "adil_project";
-    $conn = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
+    $connecting = new mysqli($dbservername, $dbUsername,$dbPass,$dbName);
     $sql = "SELECT * FROM games";
-    $result = $conn->query($sql);
+    $result = $connecting->query($sql);
     
     if ($result->num_rows > 0) {
         echo '<table class="table table-striped table-dark">
@@ -80,7 +80,7 @@ function select_data () {
     } else {
       echo "0 results";
     }
-    $conn->close();
+    $connecting->close();
 }
 
 // done
