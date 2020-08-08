@@ -27,7 +27,7 @@ var_dump($_SESSION['counter']);
     <div class="container">
         <?php 
         if($_SESSION['counter'] >= 3) {
-            echo '<div class="alert alert-danger" role="alert">Maximum 3 games you can rate!</div>';
+            echo '<div class="alert alert-danger" role="alert">Maximum 3 games you can rate! Come back tomorrow please</div>';
         } else {
             echo '<form action="tadjiev_output.php" method="post">
             <h1>Rate your favorite (or not) movie from 1 to 10</h1>
@@ -60,7 +60,7 @@ var_dump($_SESSION['counter']);
         }
         ?> 
         <!-- <div class="alert alert-danger" role="alert">
-            Maximum 3 games you can rate!
+            Maximum 3 games you can rate! Come back tomorrow please
         </div> -->  
 
 

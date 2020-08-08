@@ -87,8 +87,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
             <th scope="col">Genre</th>
             <th scope="col">Rating</th>
           </tr>
-        </thead>
-        <tbody>';
+        </thead> ';
 
 
       while($row = $result->fetch_assoc()) {
@@ -96,17 +95,18 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
         echo '  <tr>
         <th scope="row">'. $row["id"].'</th>
-        <td>'. $row["nameMovie"].'</td>;
-        <td>'. $row["genre"].'</td>;
+
+        <td>'. $row["nameMovie"].'</td>
+        <td>'. $row["genre"].'</td>
         <td>'. $row["rating"]. '</td>
       </tr>';
-     
+    
+      echo '</tbody>';
     }
-    echo '</tbody>';
-
-
+    
       
     } else {
+      
       echo "0 results";
     }
     $connecting->close();
@@ -123,6 +123,7 @@ function sanitize_html () {
 
 function increment_session_counter() {
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
+
     // var_dump($_SESSION['counter'] . " fucn");    
 }
 
