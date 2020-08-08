@@ -55,7 +55,7 @@ var_dump($_SESSION['counter']);
                 </div>
             </div>
 
-            <button type="submit" class="btn mt-3">Submit Movie</button>
+            <button type="submit" class="btn btn-success mt-3">Submit Movie</button>
         </form>';
         }
         ?> 

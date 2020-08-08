@@ -16,6 +16,11 @@ input {
     caret-color: purple;
 }
 
+
+/* MY css styling for buttons on hovwer didnt work in normal browser but works in incognito so just commented it */
+
+
+/*
 button[type="submit"] {
     background: #363b48;
     color: #fff;
@@ -34,14 +39,17 @@ button[type="submit"] {
     transition-duration: .5s;
     transition-delay: .2s, .3s, 0s;
 }
+*/
 
+
+/*
 button[type="submit"]:hover {
     background-color: #DBE300;
     color: white;
-    /*
+    
     transition-duration: 0.4s, 0.3s, 0.2s;
     transition-property: background, border-radius, color;
-    */
+    
     box-shadow: 3px rgba (255, 255, 255.7);
     font-weight: 900;
     letter-spacing: 1px;
@@ -61,3 +69,5 @@ button[type="submit"]:hover {
     border-radius: 10px;
     font-style: italic;
 }
+
+*/
