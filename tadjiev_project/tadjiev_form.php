@@ -30,7 +30,7 @@ var_dump($_SESSION['counter']);
             echo '<div class="alert alert-danger" role="alert">Maximum 3 games you can rate! Come back tomorrow please</div>';
         } else {
             echo '<form action="tadjiev_output.php" method="post">
-            <h1>Rate your favorite (or not) movie from 1 to 10</h1>
+            <h1>Rate your favorite (or not) movie from 1 to 10 kindly</h1>
             <div class="input-group">
                                                          <!-- col-sm makes it resposnsive and col-6 makes it and takes 6 spaces, plus it has 12 rows kinda  --> 
                 <input type="text" name="name" class="form-control col-sm" placeholder="Movies name">
@@ -55,18 +55,14 @@ var_dump($_SESSION['counter']);
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Submit Movie</button>
+            <button type="submit" class="btn btn-success mt-3">Submit Movie</button>
         </form>';
         }
         ?> 
-        <!-- <div class="alert alert-danger" role="alert">
-            Maximum 3 games you can rate! Come back tomorrow please
-        </div> -->  
+        
 
 
-
-
-        <a class="btn btn-success" href="tadjiev_output.php" role="button">View all records from DB</a>
+        <a class="btn btn-info" href="tadjiev_output.php" role="button">View all records from DB</a>
         
 
         
