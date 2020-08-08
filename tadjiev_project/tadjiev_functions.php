@@ -29,7 +29,7 @@ if ($connecting->connect_error) {
 //     echo '</pre>';
 // }
 
-// First try this then move on to the next line hey boysssssssss
+// First try this then move on to the next line hey 
 
 if(!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 0;
@@ -153,6 +153,10 @@ function sanitize_html () {
 function increment_session_counter() {
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
 
-  
+} // closing bracket of the function increment_session_counter()
+
+
+
+
 
 ?>
