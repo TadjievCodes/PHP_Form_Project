@@ -92,6 +92,8 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
 
       while($row = $result->fetch_assoc()) {
+        
+        // First idea was just a normal simple display but then added a Bootstrap table with table-dark theme color
         // echo "id: " . $row["id"]. " - Name: " . $row["nameMovie"]. " " . $row["genre"]. " " . $row["rating"]. "<br>";
 
         echo '  <tr>
