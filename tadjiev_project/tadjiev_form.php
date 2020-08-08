@@ -9,7 +9,7 @@ var_dump($_SESSION['submission_counter']);
 
 /*
  echo '<pre>'; 
-var_dump($_POST);
+ var_dump("Post array:", $_POST);
 
 echo  '</pre>';
 */

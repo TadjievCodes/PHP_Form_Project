@@ -38,7 +38,7 @@ include_once "tadjiev_functions.php";
          
 /*
  echo '<pre>'; 
-var_dump($_POST);
+ var_dump("Post array:", $_POST);
 
 echo  '</pre>';
 */
