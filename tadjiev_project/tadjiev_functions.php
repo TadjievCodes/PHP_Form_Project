@@ -19,12 +19,12 @@ if ($connecting->connect_error) {
   echo "Connected successfully";
 */
 
-
+// First I was only displayign the POST array values through var_dump and then decided that it's not necessary
 
 
 // if (isset($_GET['debug'])) {
 //     echo '<pre>';
-//     var_dump("Session array:", $_SESSION);
+//     var_dump("submission_counter:", $_SESSION);
 //     var_dump("Post array:", $_POST);
 //     echo '</pre>';
 // }
@@ -32,10 +32,10 @@ if ($connecting->connect_error) {
 // First try this then move on to the next line hey otherwise so many bugs are coming out
 // Displays the session on the side every time it gets incremented
 // checks whether the session exists
-if(!isset($_SESSION['counter'])) {
-    $_SESSION['counter'] = 0;
+if(!isset($_SESSION['submission_counter'])) {
+    $_SESSION['submission_counter'] = 0;
 } else {
-    $_SESSION['counter'];
+    $_SESSION['submission_counter'];
 }
 
 
@@ -152,7 +152,7 @@ function sanitize_html () {
 // session related
 
 function increment_session_counter() {
-    $_SESSION['counter'] = $_SESSION['counter'] + 1;
+    $_SESSION['submission_counter'] = $_SESSION['submission_counter'] + 1;
 
 } // closing bracket of the function increment_session_counter()
 

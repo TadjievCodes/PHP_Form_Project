@@ -2,7 +2,7 @@
 
 session_start();
 include_once 'tadjiev_functions.php';
-var_dump($_SESSION['counter']);
+var_dump($_SESSION['submission_counter']);
 
 
 // In case if there are more than 3 entries of the data into form meaning after 3 trials it stops and gives errors so to
@@ -26,7 +26,7 @@ var_dump($_SESSION['counter']);
     
     <div class="container">
         <?php 
-        if($_SESSION['counter'] >= 3) {
+        if($_SESSION['submission_counter'] >= 3) {
             echo '<div class="alert alert-danger" role="alert">Maximum 3 movies you can rate today! Come back tomorrow please</div>';
         } else {
             echo '<form action="tadjiev_output.php" method="post">
