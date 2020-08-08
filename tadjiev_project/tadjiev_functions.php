@@ -29,8 +29,9 @@ if ($connecting->connect_error) {
 //     echo '</pre>';
 // }
 
-// First try this then move on to the next line hey 
-
+// First try this then move on to the next line hey otherwise so many bugs are coming out
+// Displays the session on the side every time it gets incremented
+// checks whether the session exists
 if(!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 0;
 } else {
@@ -148,7 +149,7 @@ function sanitize_html () {
 
 
 
-// Displays the session on the side every time it gets incremented
+// session related
 
 function increment_session_counter() {
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
