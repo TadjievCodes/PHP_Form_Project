@@ -1,11 +1,15 @@
 <?php 
-// db connecting
+// Database connecting variables created and given as arguments in new mysqli function or method
+
 $dbServer = 'localhost';
 $dbUser = "phpuser";
 $dbPassword = "phpuser";
 $dbName = "tadjiev_project";
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
+
+
+
 
 // The if statement in order to uncomment and double check whether the connection to Database is working
 /*
@@ -14,6 +18,8 @@ if ($connecting->connect_error) {
   }
   echo "Connected successfully";
 */
+
+
 
 
 // if (isset($_GET['debug'])) {
@@ -37,10 +43,14 @@ if(!isset($_SESSION['counter'])) {
 
 function insert_data () {
     
+ // Had some errors to connect the variables outside of the function scope, so just created the same thing again 
+ // Tried to connect with GLOBALS[''] or adding a global keyword beside the variable but still didn't really work
+ 
 $dbServer = 'localhost';
 $dbUser = "phpuser";
 $dbPassword = "phpuser";
 $dbName = "tadjiev_project";
+
 
 $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
@@ -57,10 +67,17 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
         echo "<div class='alert alert-success' role='alert'> A new row has successfully been added! Congratulations Dear User! </div>" ."<br>";
       } else {
-        echo "Error: " . $sql . "<br>" . $connecting->error;
+        echo "Error was detected: " . $sql . "<br>" . $connecting->error;
     }
     $connecting->close();
 }
+
+
+
+
+
+
+// Getting the data from our phpMyAdmin database and displaying accordingly as required
 
 function select_data () {
     
@@ -92,7 +109,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
 
       while($row = $result->fetch_assoc()) {
-        
+
         // First idea was just a normal simple display but then added a Bootstrap table with table-dark theme color
         // echo "id: " . $row["id"]. " - Name: " . $row["nameMovie"]. " " . $row["genre"]. " " . $row["rating"]. "<br>";
 
@@ -116,6 +133,11 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
 
 } // end of the function
 
+
+
+
+
+
 // THe function to sanitize with htmlentities specially
 function sanitize_html () {
     foreach($_POST as $key => $element) {
@@ -124,10 +146,13 @@ function sanitize_html () {
 }
 
 
+
+
+// Displays the session on the side every time it gets incremented
+
 function increment_session_counter() {
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
 
-    // var_dump($_SESSION['counter'] . " fucn");    
-}
+  
 
 ?>
