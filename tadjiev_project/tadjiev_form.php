@@ -62,7 +62,7 @@ var_dump($_SESSION['counter']);
         
 
 
-        <a class="btn" id="buttonD" href="tadjiev_output.php" role="button">View all records</a>
+        <a class="btn btn-info" id="buttonD"  href="tadjiev_output.php" role="button">View all records</a>
         
 
         
