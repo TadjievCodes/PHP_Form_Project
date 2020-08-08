@@ -87,7 +87,8 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
             <th scope="col">Genre</th>
             <th scope="col">Rating</th>
           </tr>
-        </thead> ';
+        </thead> 
+        ';
 
 
       while($row = $result->fetch_assoc()) {
@@ -106,7 +107,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     
       
     } else {
-      
+
       echo "0 results";
     }
     $connecting->close();
