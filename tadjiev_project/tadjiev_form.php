@@ -55,14 +55,14 @@ var_dump($_SESSION['counter']);
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-success mt-3">Submit Movie</button>
+            <button type="submit" class="btn mt-3">Submit Movie</button>
         </form>';
         }
         ?> 
         
 
 
-        <a class="btn btn-info" href="tadjiev_output.php" role="button">View all records from DB</a>
+        <a class="btn" id="buttonD" href="tadjiev_output.php" role="button">View all records</a>
         
 
         

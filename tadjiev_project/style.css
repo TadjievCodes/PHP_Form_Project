@@ -16,7 +16,8 @@ input {
     caret-color: purple;
 }
 
-.btn {
+button[type="submit"],
+#buttonD {
     background: #363b48;
     color: #fff;
     width: 19%;
@@ -35,7 +36,8 @@ input {
     transition-delay: .2s, .3s, 0s;
 }
 
-.btn:hover {
+button[type="submit"]:hover,
+#buttonD {
     background-color: #DBE300;
     color: white;
     /*

@@ -55,7 +55,7 @@ $connecting = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
     $sql="INSERT INTO movies (nameMovie, genre, rating) VALUES ('$_POST[name]', '$_POST[genreEntry]', '$_POST[rate]')";
     if ($connecting->query($sql) === TRUE) {
 
-        echo "<div class='alert alert-success' role='alert'> A new row has successfully been added! Congratulations! </div>" ."<br>";
+        echo "<div class='alert alert-success' role='alert'> A new row has successfully been added! Congratulations Dear User! </div>" ."<br>";
       } else {
         echo "Error: " . $sql . "<br>" . $connecting->error;
     }
