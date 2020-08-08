@@ -5,7 +5,7 @@ include_once 'tadjiev_functions.php';
 var_dump($_SESSION['submission_counter']);
 
 
-// IF desired can uncomment the var_dump but I think it makes it look ugly so uncommented it
+// IF desired can uncomment the var_dump of the array POST but I think it makes it look ugly so uncommented it
 
 /*
  echo '<pre>'; 

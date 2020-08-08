@@ -53,7 +53,7 @@ echo  '</pre>';
  <!-- use the HTTP_REFERER, sanitize it, and echo it out via PHP below--> 
    <?php
   $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
-  echo "<a href='$url'>Back to the Form</a>"; 
+  echo "<a href='$url' style='color:white;'>Back to the Form</a>"; 
 ?>
 
 
