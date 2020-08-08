@@ -34,7 +34,15 @@ include_once "tadjiev_functions.php";
           // to dispaly the output of how many sessions we had already 1 , 2 or 3
          var_dump($_SESSION['submission_counter']);
          // To dsiplay var_dump results, it can be uncommented
-         //var_dump("Post array Results:", $_POST);
+         
+         
+/*
+ echo '<pre>'; 
+var_dump($_POST);
+
+echo  '</pre>';
+*/
+
         ?>
     </div>
    

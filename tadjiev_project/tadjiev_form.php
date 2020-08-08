@@ -5,6 +5,14 @@ include_once 'tadjiev_functions.php';
 var_dump($_SESSION['submission_counter']);
 
 
+// IF desired can uncomment the var_dump but I think it makes it look ugly so uncommented it
+
+/*
+ echo '<pre>'; 
+var_dump($_POST);
+
+echo  '</pre>';
+*/
 // In case if there are more than 3 entries of the data into form meaning after 3 trials it stops and gives errors so to
 // let it work, we can do this > uncomment this below line session_unset();
 
