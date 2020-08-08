@@ -16,6 +16,12 @@ include_once "tadjiev_functions.php";
 </head>
 <body>
     <div class="container">
+
+
+
+    <!-- Calling the PHP functions here as required one by one -->
+
+    
         <?php 
         if(!empty($_POST)) {
             sanitize_html();
